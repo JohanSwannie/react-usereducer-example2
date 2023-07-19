@@ -23,10 +23,18 @@ li {
   grid-template-columns: repeat(8, 1fr);
 }
 
-button {
+#remove {
   color: red;
   background-color: rgb(185, 239, 59);
   width: 2rem;
+  margin-left: 1rem;
+  padding: .2rem;
+}
+
+#clear {
+  color: rgb(253, 250, 250);
+  background-color: rgb(10, 27, 217);
+  width: 4rem;
   margin-left: 1rem;
   padding: .2rem;
 }
