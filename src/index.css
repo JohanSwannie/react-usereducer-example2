@@ -9,4 +9,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    background-color: rgb(174, 239, 239);
+}
+
+input {
+  color: #FFF;
+  background-color: blue;
+  margin-left: 1.2rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+button {
+  color: red;
+  background-color: rgb(185, 239, 59);
+  width: 2rem;
+  margin-left: 1rem;
+  padding: .2rem;
 }
