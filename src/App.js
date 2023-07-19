@@ -14,6 +14,8 @@ const App = () => {
         ];
       case "remove":
         return state.filter((_, index) => index !== action.index);
+      case "clear":
+        return [];
       default:
         return state;
     }
@@ -37,11 +39,19 @@ const App = () => {
         </label>
       </form>
       <br />
+      <button id="clear" onClick={() => dispatch({ type: "clear" })}>
+        Clear
+      </button>
+      <br />
+      <br />
       <ul>
         {tech.map((tec, index) => (
           <li key={tec.id}>
             {tec.technology}
-            <button onClick={() => dispatch({ type: "remove", index })}>
+            <button
+              id="remove"
+              onClick={() => dispatch({ type: "remove", index })}
+            >
               X
             </button>
           </li>
