@@ -2,14 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+
+body {
     background-color: rgb(174, 239, 239);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
@@ -34,7 +40,7 @@ li {
 #clear {
   color: rgb(253, 250, 250);
   background-color: rgb(10, 27, 217);
-  width: 4rem;
+  width: 10rem;
   margin-left: 1rem;
   padding: .2rem;
 }
