@@ -35,12 +35,12 @@ const App = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Enter a Technology
-          <input ref={inputRef} />
+          <input ref={inputRef} required />
         </label>
       </form>
       <br />
       <button id="clear" onClick={() => dispatch({ type: "clear" })}>
-        Clear
+        Clear all input
       </button>
       <br />
       <br />
