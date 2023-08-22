@@ -4,6 +4,15 @@ const App = () => {
   const [inputValues, setInputValues] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const inputRef = useRef();
+
+  const setNewInputValues = (filteredValues) => {
+    setInputValues([]);
+    const newInputValues = filteredValues.map((item) => {
+      return item.technology;
+    });
+    setInputValues(newInputValues);
+  };
+
   const [tech, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case "add":
@@ -15,16 +24,21 @@ const App = () => {
           },
         ];
       case "remove":
-        return state.filter((_, index) => index !== action.index);
+        const filteredValues = state.filter(
+          (_, index) => index !== action.index
+        );
+        setNewInputValues(filteredValues);
+        return filteredValues;
       case "clear":
+        setInputValues([]);
         return [];
       default:
         return state;
     }
   }, []);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     if (inputValues.includes(inputRef.current.value)) {
       setErrorMessage(
         "You have already chosen that technology - Please choose another technology"
