@@ -43,6 +43,9 @@ const App = () => {
       setErrorMessage(
         "You have already chosen that technology - Please choose another technology"
       );
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 3500);
     } else {
       setInputValues([...inputValues, inputRef.current.value]);
       setErrorMessage("");
