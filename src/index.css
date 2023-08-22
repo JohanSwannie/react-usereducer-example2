@@ -29,9 +29,12 @@ ul {
   margin-bottom: 2rem;
 }
 
-li {
+.tech_elements {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  width: 100vw;
+  padding: 0 20vw;
+  margin-bottom: 1rem;
 }
 
 #remove {
