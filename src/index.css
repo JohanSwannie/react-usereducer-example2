@@ -24,6 +24,13 @@ input {
   margin-left: 1.2rem;
 }
 
+input[type=submit] {
+  color: #FFF;
+  background-color: red;
+  font-weight: bold;
+  padding: .3rem;
+}
+
 ul {
   list-style: none;
   margin-bottom: 2rem;
