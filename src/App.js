@@ -45,7 +45,7 @@ const App = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Enter a Technology
-          <input ref={inputRef} required />
+          <input ref={inputRef} autoFocus required />
         </label>
       </form>
       <br />
@@ -56,15 +56,15 @@ const App = () => {
       <br />
       <ul>
         {tech.map((tec, index) => (
-          <li key={tec.id}>
-            {tec.technology}
+          <div className="tech_elements">
+            <li key={tec.id}>{tec.technology}</li>
             <button
               id="remove"
               onClick={() => dispatch({ type: "remove", index })}
             >
               X
             </button>
-          </li>
+          </div>
         ))}
       </ul>
       {errorMessage.length > 0 && <p>{errorMessage}</p>}
