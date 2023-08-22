@@ -5,14 +5,6 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const inputRef = useRef();
 
-  const setNewInputValues = (filteredValues) => {
-    setInputValues([]);
-    const newInputValues = filteredValues.map((item) => {
-      return item.technology;
-    });
-    setInputValues(newInputValues);
-  };
-
   const [tech, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case "add":
@@ -27,7 +19,11 @@ const App = () => {
         const filteredValues = state.filter(
           (_, index) => index !== action.index
         );
-        setNewInputValues(filteredValues);
+        setInputValues([]);
+        const newInputValues = filteredValues.map((item) => {
+          return item.technology;
+        });
+        setInputValues(newInputValues);
         return filteredValues;
       case "clear":
         setInputValues([]);
