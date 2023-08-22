@@ -38,6 +38,7 @@ const App = () => {
       });
     }
     inputRef.current.value = "";
+    inputRef.current.focus();
   }
 
   return (
@@ -47,6 +48,7 @@ const App = () => {
           Enter a Technology
           <input ref={inputRef} autoFocus required />
         </label>
+        <input type="submit" />
       </form>
       <br />
       <button id="clear" onClick={() => dispatch({ type: "clear" })}>
